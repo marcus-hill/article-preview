@@ -1,0 +1,261 @@
+// https://piccalil.li/blog/a-modern-css-reset
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Code: */
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ECF2F8;
+}
+
+.card-holder {
+    /* border: 1px solid red; */
+    max-width: calc(327rem / 16);
+    border-radius: 10px;
+    font-family: 'Manrope', sans-serif;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.main-image {
+    max-height: 12rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.title {
+    margin: calc(36rem / 16) calc(32rem / 16) calc(12rem / 16) calc(32rem / 16);
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #48556A;
+}
+
+.description {
+    margin: 0 calc(32rem / 16) calc(32rem / 16) calc(32rem / 16);
+    font-size: calc(13rem / 16);
+    color: #6E8098;
+    line-height: 20px;
+    letter-spacing: 0.12px;
+}
+
+.author-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 calc(32rem / 16) calc(20rem / 16) calc(32rem / 16);
+}
+
+.author {
+    display: flex;
+    gap: 1rem;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+    font-size: calc(13rem / 16);
+    letter-spacing: 0.12px;
+    line-height: 20px;
+}
+
+.author-picture {
+    width: calc(40rem / 16);
+    height: calc(40rem / 16);
+    border-radius: 60%;
+}
+
+.author-name {
+    color: #48556A;
+    font-weight: 700;
+}
+
+.author-date {
+    color: #9DAEC2;
+}
+
+.share-button {
+    background-color: #ECF2F8;
+    padding: calc(10rem / 16);
+    border-radius: 50%;
+}
+
+/* .author-section {
+    display: none;
+} */
+
+.share-section {
+    background-color: #48556A;
+    max-height: calc(64rem / 16);
+    padding: 1rem calc(32rem / 16) 1rem calc(32rem / 16);
+}
+
+.share-text {
+    margin-right: calc(5rem / 16);
+    text-transform: uppercase;
+    color: #9DAEC2;
+    font-size: calc(13rem / 16);
+    letter-spacing: 5px;
+    line-height: 20px;
+}
+
+.share {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.share-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.share-button-small path {
+    color: white;
+    fill: currentcolor;
+}
+
+.share-button-small {
+    margin-top: 4px;
+    background-color: #6E8098;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#open-share-desktop {
+    display: none;
+}
+
+@media (min-width: 50rem) {
+    .card-holder {
+        display: flex;
+        flex-direction: row;
+        max-height: calc(280rem / 16);
+        max-width: calc(730rem / 16);
+        overflow: visible;
+    }
+    .main-image {
+        max-width: 16rem;
+        max-height: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+    #open-share-desktop {
+        display: flex;
+    }
+
+    #open-share-mobile {
+        display: none;
+    }
+
+    .share-section {
+        position: relative;
+        bottom: calc(140rem / 16);
+        left: calc(285rem / 16);
+        max-width: calc(200rem / 16);
+        border-radius: 10px;
+    }
+
+    .share-holder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .share-button-small {
+        display: none;
+    }
+
+    .description && .title {
+        margin-left: calc(40rem / 16);
+        margin-right: calc(40rem / 16);
+    }
+}
