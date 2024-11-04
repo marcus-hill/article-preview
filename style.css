@@ -205,11 +205,11 @@ button {
     background: none;
 }
 
-.hidden {
+#open-share-desktop {
     display: none;
 }
 
-#open-share-desktop {
+.hidden {
     display: none;
 }
 
@@ -268,7 +268,6 @@ button {
         left: calc(400rem / 16);
         height: 30px;
         width: 30px;
-        /* top: 36px; */
         transform: rotateY(180deg) rotate(45deg);
         z-index: 1;
     }
@@ -277,3 +276,4 @@ button {
         display: none;
     }
 }
+
