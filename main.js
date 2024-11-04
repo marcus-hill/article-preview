@@ -10,4 +10,5 @@ document.getElementById("close-share").addEventListener('click', function(event)
 
 document.getElementById("open-share-desktop").addEventListener('click', function(event) {
     document.getElementById("share-section").classList.toggle("hidden");
+    document.getElementById("share-pointer").classList.toggle("hidden");
 });

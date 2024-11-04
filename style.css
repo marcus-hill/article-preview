@@ -213,6 +213,10 @@ button {
     display: none;
 }
 
+.share-pointer {
+    display: none;
+}
+
 @media (min-width: 50rem) {
     .card-holder {
         display: flex;
@@ -242,6 +246,7 @@ button {
         left: calc(285rem / 16);
         max-width: calc(200rem / 16);
         border-radius: 10px;
+        z-index: 2;
     }
 
     .share-holder {
@@ -257,5 +262,22 @@ button {
     .description && .title {
         margin-left: calc(40rem / 16);
         margin-right: calc(40rem / 16);
+    }
+
+    .share-pointer {
+        background-color: #48556A;
+        position: relative;
+        display: block;
+        bottom: calc(155rem / 16);
+        left: calc(400rem / 16);
+        height: 30px;
+        width: 30px;
+        /* top: 36px; */
+        transform: rotateY(180deg) rotate(45deg);
+        z-index: 1;
+    }
+
+    .hidden {
+        display: none;
     }
 }
